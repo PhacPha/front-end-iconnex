@@ -3,19 +3,32 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
-
-
 // โหลดไฟล์เชื่อมต่อฐานข้อมูล
 // require_once 'db_connect.php';
 require_once 'db_connect.php';
+
+// ดักจับการเข้าชมเว็บ CTR และ กราฟ
+$current_date = date('Y-m-d');
+    if (!isset($_SESSION['last_click_date']) || $_SESSION['last_click_date'] !== $current_date) {
+        $stmt = $pdo->prepare("INSERT INTO clicks (click_date, click_count) VALUES (?, 1) ON DUPLICATE KEY UPDATE click_count = click_count + 1");
+        $stmt->execute([$current_date]);
+        $_SESSION['last_click_date'] = $current_date;
+    }
+    
 // เรียกใช้ record_ip เงียบๆ
 define('SILENT_MODE', true);
 // require_once '../icn_admin/controllers/record_ip.php';
-require_once '../icn_admin/controllers/record_ip.php';
+require_once 'icn_admin/controllers/record_ip.php';
 // header.php (User-side header)
 
 // เริ่ม session ถ้าจำเป็น (ถ้าไม่ได้เริ่มไว้ที่อื่น)
 // session_start();
+$current_date = date('Y-m-d');
+if (!isset($_SESSION['last_click_date']) || $_SESSION['last_click_date'] !== $current_date) {
+    $stmt = $pdo->prepare("INSERT INTO clicks (click_date, click_count) VALUES (?, 1) ON DUPLICATE KEY UPDATE click_count = click_count + 1");
+    $stmt->execute([$current_date]);
+    $_SESSION['last_click_date'] = $current_date;
+}
 
 
 // ----------------------
@@ -102,6 +115,7 @@ $pdo->prepare("
                     <li><a href="about">เกี่ยวกับเรา</a></li>
                     <li><a href="service">บริการ</a></li>
                     <li><a href="content">ผลงาน</a></li>
+                    <li><a href="https://iconnexthailand.com/public/blog/myblog/views/blog.php" target="_blank" rel="noopener noreferrer">บทความ</a></li>
                     <li><a href="contact">ติดต่อเรา</a></li>
                 </ul>
             </nav>
@@ -111,9 +125,14 @@ $pdo->prepare("
     <script src="header.js"></script>
     <script>
         // ฟังก์ชันลบสถานะออนไลน์
+        // ฟังก์ชันลบสถานะออนไลน์ ด้วย fetch keepalive
         function removeOnline() {
-            navigator.sendBeacon('count_online.php');
+            fetch('/count_online.php', {
+                method: 'POST',
+                keepalive: true
+            });
         }
+
         // เมื่อปิดหรือสลับแท็บ ให้ยิง Beacon
         window.addEventListener('pagehide', removeOnline);
         document.addEventListener('visibilitychange', function () {
