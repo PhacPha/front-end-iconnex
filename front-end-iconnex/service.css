@@ -1,0 +1,529 @@
+/* รีเซ็ตค่าเริ่มต้นของ margin, padding และใช้ box-sizing เพื่อให้ responsive ง่ายขึ้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* กำหนดสไตล์พื้นฐานของ body */
+body {
+    font-family: "Kanit", sans-serif; /* ใช้ฟอนต์ Kanit */
+    background: radial-gradient(circle, #0d1b2a, #000); /* พื้นหลังแบบ gradient */
+    color: white; /* สีตัวอักษรเป็นสีขาว */
+    overflow-x: hidden; /* ป้องกันการเลื่อนแนวนอน */
+    line-height: 1.6; /* ระยะห่างบรรทัด */
+}
+
+/* ส่วน Hero Section */
+.hero-service {
+    position: relative; /* เพื่อให้ canvas วางทับได้ */
+    min-height: 100vh; /* ความสูงเต็มหน้าจอ */
+    display: flex; /* ใช้ flexbox เพื่อจัดกึ่งกลาง */
+    align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    text-align: center; /* ข้อความกึ่งกลาง */
+    padding: 2rem 1rem; /* ระยะห่างขอบปรับตามหน้าจอ */
+}
+
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #FFC107 0%, #00A1D6 100%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 161, 214, 0.3);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    stroke: #ffffff;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1);
+}
+
+.scroll-to-top.visible {
+    display: flex;
+}
+.scroll-to-top svg {
+    stroke: #FFFFFF !important;
+}
+
+/* Responsive Design for Scroll to Top */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .scroll-to-top svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .scroll-to-top {
+        width: 35px;
+        height: 35px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .scroll-to-top svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Canvas สำหรับอนุภาคใน Hero Section */
+#particleCanvas {
+    position: absolute; /* วางทับพื้นหลัง */
+    top: 0;
+    left: 0;
+    width: 100%; /* ความกว้างเต็ม section */
+    height: 100%; /* ความสูงเต็ม section */
+    z-index: 0; /* อยู่ด้านหลังเนื้อหา */
+    pointer-events: none; /* ไม่รบกวนการคลิก */
+}
+
+/* เนื้อหาใน Hero Section */
+.hero-content {
+    z-index: 1; /* อยู่ด้านหน้า canvas */
+}
+
+/* ข้อความหลักที่มีเอฟเฟกต์ glitch */
+.glitch-text {
+    font-size: clamp(2rem, 8vw, 6rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    font-weight: bold;
+    color: #00aaff; /* สีน้ำเงิน */
+    text-shadow: 0 0 5px #00aaff; /* เงาสีน้ำเงิน */
+    margin-bottom: 1rem;
+}
+
+/* ข้อความอธิบายใน Hero Section */
+.hero-content p {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #e0e0e0; /* สีเทาอ่อน */
+    margin-bottom: 2rem;
+}
+
+/* ปุ่มที่มีเอฟเฟกต์เรืองแสง */
+.glowing-button {
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem); /* ขนาดปรับตามหน้าจอ */
+    font-size: clamp(0.9rem, 2vw, 1.2rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    border: none;
+    background: #0056B3; /* สีน้ำเงินเข้ม */
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00aaff; /* เงาเรืองแสง */
+    border-radius: 25rem; /* ขอบโค้ง */
+    transition: all 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.glowing-button:hover {
+    box-shadow: 0 0 20px #00ccff; /* เงาใหญ่ขึ้นเมื่อ hover */
+    background: #0077cc; /* สีสว่างขึ้น */
+    transform: scale(1.05); /* ขยายเล็กน้อย */
+}
+
+/* ส่วน Services Section */
+.services {
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem); /* ระยะห่างปรับตามหน้าจอ */
+    background: linear-gradient(100deg, #0d1b2a, #1b263b); /* พื้นหลัง gradient */
+    text-align: center;
+}
+
+/* หัวข้อของ section */
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #FFD700; /* สีทอง */
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* เงาสีทอง */
+    margin-bottom: 1rem;
+}
+
+/* ข้อความแนะนำใน section */
+.section-intro {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #b0c4de; /* สีเทาอ่อน */
+    max-width: 900px; /* ความกว้างสูงสุด */
+    margin: 0 auto 2rem; /* จัดกึ่งกลาง */
+    line-height: 1.7;
+}
+
+/* กริดสำหรับการ์ดบริการ */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ปรับคอลัมน์ตามหน้าจอ */
+    gap: clamp(1rem, 3vw, 2rem); /* ระยะห่างปรับตามหน้าจอ */
+}
+
+/* การ์ดบริการ */
+.service-card {
+    background: #1e3a8a; /* สีน้ำเงินเข้ม */
+    border-radius: 15px; /* ขอบโค้ง */
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 255, 0.2); /* เงา */
+    transition: all 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02); /* เลื่อนขึ้นและขยาย */
+    box-shadow: 0 15px 30px rgba(0, 0, 255, 0.3); /* เงาใหญ่ขึ้น */
+}
+
+/* ไอคอนของการ์ด */
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 0 5px rgba(0, 170, 255, 0.5)); /* เงาเรืองแสง */
+}
+
+/* หัวข้อใน การ์ด */
+.service-card h3 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+/* ข้อความใน การ์ด */
+.service-card p {
+    font-size: 1rem;
+    color: #b0c4de; /* สีเทาอ่อน */
+    margin-bottom: 1rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* รายการใน การ์ด */
+.service-card ul li {
+    font-size: 0.9rem;
+    color: #e0e0e0; /* สีเทาอ่อน */
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-card ul li:before {
+    content: "✔️"; /* ไอคอนเช็ค */
+    position: absolute;
+    left: 0;
+    color: #00aaff; /* สีน้ำเงิน */
+}
+
+/* ส่วน Additional Info */
+.additional-info {
+    padding: clamp(4rem, 8vw, 6rem) clamp(2rem, 6vw, 3rem); /* ระยะห่างปรับตามหน้าจอ */
+    background: linear-gradient(135deg, #0d1b2a, #1b263b); /* พื้นหลัง gradient */
+}
+
+/* บล็อกข้อมูล */
+.info-block {
+    margin-bottom: clamp(4rem, 7vw, 6rem); /* ระยะห่างปรับตามหน้าจอ */
+    padding: clamp(3rem, 6vw, 4rem); /* ระยะห่างปรับตามหน้าจอ */
+    background: rgba(255, 255, 255, 0.03); /* พื้นหลังโปร่งแสง */
+    border-radius: 20px; /* ขอบโค้ง */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* เงา */
+    backdrop-filter: blur(5px); /* เอฟเฟกต์เบลอ */
+}
+
+/* หัวข้อของบล็อก */
+.block-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ข้อความรองใน section */
+.section-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #b0c4de; /* สีเทาอ่อน */
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+/* กริดสำหรับเนื้อหาในบล็อก */
+.info-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ปรับคอลัมน์ตามหน้าจอ */
+    gap: clamp(2rem, 4vw, 3rem); /* ระยะห่างปรับตามหน้าจอ */
+}
+
+/* รายการข้อมูล */
+.info-item {
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05); /* พื้นหลังโปร่งแสง */
+    border-radius: 15px; /* ขอบโค้ง */
+    transition: all 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.info-item:hover {
+    transform: translateY(-5px); /* เลื่อนขึ้น */
+    box-shadow: 0 10px 20px rgba(0, 170, 255, 0.15); /* เงาเรืองแสง */
+}
+
+/* หัวข้อในรายการข้อมูล */
+.info-title {
+    font-size: clamp(1.5rem, 3vw, 2rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #00aaff; /* สีน้ำเงิน */
+    margin-bottom: 1.2rem;
+}
+
+/* ข้อความในรายการข้อมูล */
+.info-description {
+    font-size: clamp(1.1rem, 2vw, 1.4rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #d0d8e6; /* สีเทาอ่อน */
+    line-height: 1.9;
+}
+
+/* กริดสำหรับขั้นตอนการทำงาน */
+.process-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* ปรับคอลัมน์ตามหน้าจอ */
+    gap: clamp(2rem, 4vw, 3rem); /* ระยะห่างปรับตามหน้าจอ */
+}
+
+/* รายการขั้นตอน */
+.process-item {
+    padding: 2rem;
+    background: linear-gradient(145deg, #1e3a8a, #153077); /* พื้นหลัง gradient */
+    border-radius: 15px; /* ขอบโค้ง */
+    transition: all 0.3s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.process-item:hover {
+    transform: translateY(-5px); /* เลื่อนขึ้น */
+    box-shadow: 0 10px 20px rgba(0, 170, 255, 0.15); /* เงาเรืองแสง */
+}
+
+/* ขั้นตอนในรายการ */
+.process-step {
+    display: block;
+    font-size: clamp(1.2rem, 2vw, 1.5rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    font-weight: 500;
+    color: #00aaff; /* สีน้ำเงิน */
+    margin-bottom: 0.8rem;
+    text-transform: uppercase; /* ตัวพิมพ์ใหญ่ */
+}
+
+/* หัวข้อในขั้นตอน */
+.process-title {
+    font-size: clamp(1.5rem, 3vw, 2rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: white;
+    margin-bottom: 1.2rem;
+}
+
+/* ข้อความในขั้นตอน */
+.process-description {
+    font-size: clamp(1.1rem, 2vw, 1.4rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #b0c4de; /* สีเทาอ่อน */
+    line-height: 1.9;
+}
+
+/* โมดัลสำหรับฟอร์มติดต่อ */
+.modal {
+    display: none; /* ซ่อนเริ่มต้น */
+    position: fixed; /* คงที่บนหน้าจอ */
+    top: 0;
+    left: 0;
+    width: 100%; /* เต็มความกว้าง */
+    height: 100%; /* เต็มความสูง */
+    background: rgba(0, 0, 0, 0.85); /* พื้นหลังโปร่งแสง */
+    justify-content: center; /* จัดกึ่งกลางแนวนอน */
+    align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+    z-index: 2000; /* อยู่ด้านหน้าสุด */
+}
+
+/* เนื้อหาในโมดัล */
+.modal-content {
+    background: #ffffff; /* สีขาว */
+    padding: clamp(3rem, 6vw, 4rem); /* ระยะห่างปรับตามหน้าจอ */
+    border-radius: 15px; /* ขอบโค้ง */
+    width: clamp(350px, 85vw, 600px); /* ความกว้างปรับตามหน้าจอ */
+    color: #0d1b2a; /* สีตัวอักษร */
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* เงา */
+}
+
+/* ปุ่มปิดโมดัล */
+.close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2.5rem;
+    color: #333; /* สีเทาเข้ม */
+    cursor: pointer;
+    transition: color 0.3s ease; /* เปลี่ยนสีเมื่อ hover */
+}
+
+.close:hover {
+    color: #00aaff; /* สีน้ำเงิน */
+}
+
+/* หัวข้อในโมดัล */
+.modal-title {
+    font-size: clamp(2rem, 4vw, 2.5rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+/* ข้อความรองในโมดัล */
+.modal-subtitle {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    color: #666; /* สีเทา */
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* ฟอร์มติดต่อ */
+.contact-form {
+    display: flex;
+    flex-direction: column; /* วางแนวตั้ง */
+    gap: 2rem; /* ระยะห่างระหว่างช่อง */
+}
+
+/* กลุ่มฟอร์ม */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* อินพุตและ textarea ในฟอร์ม */
+.form-group input,
+.form-group textarea {
+    padding: 1.2rem;
+    border: 1px solid #ddd; /* ขอบสีเทา */
+    border-radius: 8px; /* ขอบโค้ง */
+    font-size: clamp(1.1rem, 2vw, 1.4rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+    font-family: "Kanit", sans-serif;
+    background: #f9f9f9; /* สีพื้นหลัง */
+    transition: border-color 0.3s ease; /* เปลี่ยนสีขอบเมื่อ focus */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00aaff; /* สีน้ำเงินเมื่อ focus */
+    outline: none;
+}
+
+.form-group textarea {
+    height: 140px; /* ความสูงคงที่ */
+    resize: none; /* ป้องกันการยืด */
+}
+
+/* ปุ่มในฟอร์ม */
+.contact-form .glowing-button {
+    margin-top: 2rem;
+    padding: clamp(0.8rem, 2.5vw, 1.2rem) clamp(1.5rem, 4vw, 2.5rem); /* ขนาดปรับตามหน้าจอ */
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem); /* ขนาดตัวอักษรปรับตามหน้าจอ */
+}
+
+/* ส่วน Contact Button Section */
+.contact-button-section {
+    padding: 6rem 1rem 10rem; /* ระยะห่างคงที่แต่ responsive ใน media query */
+    background: radial-gradient(circle, #0d1b2a, #000); /* พื้นหลัง gradient */
+    text-align: center;
+    position: relative;
+    z-index: 2; /* อยู่ด้านหน้า canvas */
+}
+
+/* Canvas สำหรับอนุภาคใน Contact Section */
+#contactParticleCanvas {
+    position: absolute; /* วางทับพื้นหลัง */
+    top: 0;
+    left: 0;
+    width: 100%; /* ความกว้างเต็ม section */
+    height: 100%; /* ความสูงเต็ม section */
+    z-index: 0; /* อยู่ด้านหลังเนื้อหา */
+    pointer-events: none; /* ไม่รบกวนการคลิก */
+}
+
+/* ปุ่ม CTA */
+.cta-button {
+    display: inline-block;
+    padding: 1.5rem 3.5rem; /* ขนาดคงที่ */
+    font-size: 1.8rem; /* ขนาดตัวอักษร */
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    background: #0056B3; /* สีน้ำเงินเข้ม */
+    border-radius: 30px; /* ขอบโค้ง */
+    box-shadow: 0 0 15px #00aaff; /* เงาเรืองแสง */
+    transition: all 0.3s ease, transform 0.2s ease; /* เอฟเฟกต์การเปลี่ยนแปลง */
+    position: relative;
+    overflow: hidden;
+    z-index: 1; /* อยู่ด้านหน้าสุด */
+}
+
+/* เอฟเฟกต์เรืองแสงของปุ่ม CTA */
+.glowing-button.cta-button {
+    animation: glow 2s infinite alternate; /* แอนิเมชันเรืองแสง */
+}
+
+/* เมื่อ hover ปุ่ม CTA */
+.cta-button:hover {
+    background: #0077cc; /* สีสว่างขึ้น */
+    box-shadow: 0 0 25px #00ccff, 0 0 40px #0077cc; /* เงาใหญ่ขึ้น */
+    transform: scale(1.1) translateY(-3px); /* ขยายและเลื่อนขึ้น */
+}
+
+/* เมื่อกดปุ่ม CTA */
+.cta-button:active {
+    transform: scale(0.95) translateY(0); /* ย่อลง */
+}
+
+/* แอนิเมชันเรืองแสง */
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px #00aaff;
+    }
+    to {
+        box-shadow: 0 0 25px #00ccff, 0 0 40px #0077cc;
+    }
+}
+
+/* Responsive Design สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: clamp(2rem, 6vw, 4rem); /* ปรับขนาดตัวอักษร */
+    }
+    .services-grid {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ */
+    }
+    .info-content,
+    .process-content {
+        grid-template-columns: 1fr; /* เปลี่ยนเป็น 1 คอลัมน์ */
+    }
+    .info-block {
+        padding: 2rem; /* ลดระยะห่าง */
+    }
+    .modal-content {
+        padding: 2rem; /* ลดระยะห่าง */
+    }
+    .cta-button {
+        padding: 1.2rem 2.5rem; /* ลดขนาดปุ่ม */
+        font-size: 1.5rem; /* ลดขนาดตัวอักษร */
+    }
+    .contact-button-section {
+        padding: 4rem 1rem 10rem; /* ปรับระยะห่าง */
+    }
+}

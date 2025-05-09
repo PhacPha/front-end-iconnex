@@ -1,0 +1,920 @@
+/* styles.css */
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    background: radial-gradient(circle, #0d1b2a, #000);
+    color: white;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+}
+
+#loading-video {
+    width: 100%;
+    max-width: clamp(300px, 50vw, 500px);
+    height: auto;
+    object-fit: contain;
+    transition: transform 1s ease, filter 1s ease;
+}
+
+#transition-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: radial-gradient(circle, #0d1b2a, #000);
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.glitch-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(2rem, 8vw, 10rem);
+    font-weight: bold;
+    color: #00aaff;
+    text-shadow: 0 0 5px #00aaff;
+}
+
+.hidden {
+    opacity: 0.2;
+}
+
+.glowing-button {
+    padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 3vw, 2rem);
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
+    border: none;
+    background: #0056B3;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00aaff;
+    border-radius: 25rem;
+    transition: all 0.3s ease;
+}
+
+.glowing-button:hover {
+    box-shadow: 0 0 20px #00ccff, 0 0 40px #00ccff;
+    background: #0077cc;
+    transform: scale(1.05);
+}
+
+/* Agency Section */
+.agency {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    position: relative; /* สำคัญสำหรับการใช้งาน ::before */
+    min-height: 500px;
+    margin-bottom: -1px; /* ให้แนบชิดกับ section ถัดไป */
+    overflow: hidden; /* ซ่อนส่วนเกินที่อาจหลุดออกมาจากเลเยอร์ */
+}
+
+.agency::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(60deg, rgba(13, 27, 42, 0.7), rgba(255, 255, 255, 0.322));
+    filter: blur(50px); /* เพิ่มความเบลอเฉพาะพื้นหลัง */
+    z-index: 1; /* วางให้อยู่ข้างหลังเนื้อหา */
+}
+
+.agency > * {
+    position: relative;
+    z-index: 2; /* ทำให้เนื้อหาอยู่เหนือพื้นหลัง */
+    color: #ffffff; /* เพื่อให้เนื้อหาอ่านง่าย */
+}
+
+.agency .container {
+    flex: 1 1 70%;
+    max-width: 70%;
+    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 5vw, 3rem);
+    box-sizing: border-box;
+}
+
+.agency h2 {
+    color: #FFD700;
+    /* color:#00ffcc; */
+    font-size: clamp(0.5rem, 3vw, 1.5rem);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.agency h1 {
+    color: #e0e0e0;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+    margin-top: 0;
+    margin-bottom: clamp(0.8rem, 2vw, 1.5rem);
+}
+
+.agency h1 .highlight {
+    color: #00aaff;
+    font-weight: bold;
+    font-size: clamp(1.3rem, 6vw, 3.0rem);
+    animation: fade 2s infinite ease-in-out;
+    text-shadow: 0 0 15px rgb(0 0 0 / 0.5%);
+}
+
+.agency p {
+    color: #e0e0e0;
+    line-height: 1.8;
+    margin-bottom: clamp(1rem, 3vw, 1.8rem);
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
+}
+
+.agency ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    display: block;
+}
+
+.agency ul li {
+    color: #e0e0e0;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    padding: clamp(0.4rem, 1vw, 0.6rem) 0;
+}
+
+.contact-btn {
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    background: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.4);
+}
+
+.contact-btn:hover {
+    background: #0088cc;
+    box-shadow: 0 6px 15px rgba(0, 170, 255, 0.6);
+    transform: scale(1.05);
+}
+
+.image-container {
+    flex: 1 1 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch; /* เปลี่ยนจาก center เป็น flex-end เพื่อให้รูปชิดล่าง */
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.simple-image {
+    /* position: absolute; */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    bottom: 0;
+    display: block;
+    /* -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%); */
+    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 80%, rgba(0, 0, 0, 0) 100%); */
+}
+
+/* Responsive Design - ปรับปรุงใหม่ */
+@media (max-width: 1200px) {
+    .agency {
+        padding: 0 clamp(2rem, 5vw, 5rem);
+    }
+
+    .agency .container {
+        flex: 1 1 65%;
+        max-width: 65%;
+    }
+
+    .image-container {
+        flex: 1 1 35%;
+        max-width: 35%;
+        padding: 0; /* ลบ padding เดิมออก */
+        align-items: flex-end; /* รักษาการชิดล่าง */
+    }
+
+    .simple-image {
+        width: 100%;
+        height: 100%; /* เปลี่ยนจาก 100% เป็น auto เพื่อรักษาสัดส่วน */
+        object-fit: cover;
+        margin: 0;
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .agency {
+        flex-direction: column;
+        padding: clamp(1rem, 3vw, 2rem);
+        min-height: auto;
+    }
+
+    .agency .container {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: clamp(1rem, 2vw, 1.5rem);
+        text-align: center;
+    }
+
+    .image-container {
+        flex: 1 1 100%;
+        max-width: 80%;
+        justify-content: center;
+        /* padding: 0; ลบ padding เดิมออก */
+        margin-bottom: -4rem;
+        align-items: flex-end; /* รักษาการชิดล่าง */
+        margin-top: -1px; /* ป้องกันช่องว่างด้านบน */
+    }
+
+    .simple-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* เปลี่ยนกลับเป็น cover เพื่อให้เต็มพื้นที่ */
+        padding-top: 0;
+    }
+
+    .agency ul {
+        text-align: left;
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .agency {
+        padding: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .agency .container {
+        padding: clamp(0.5rem, 1.5vw, 1rem);
+    }
+
+    .image-container {
+        max-width: 100%;
+        /* padding: 0 */
+        margin-bottom: -3rem;
+        align-items: flex-end; /* รักษาการชิดล่าง */
+    }
+
+    .agency h1 {
+        font-size: clamp(1.3rem, 4vw, 2.5rem);
+    }
+
+    .agency h1 .highlight {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+
+    .agency p {
+        font-size: clamp(0.85rem, 1.8vw, 1.1rem);
+    }
+
+    .agency ul li {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .agency {
+        padding: clamp(0.5rem, 1.5vw, 1rem);
+    }
+
+    .agency .container {
+        padding: clamp(0.5rem, 1vw, 0.8rem);
+    }
+
+    .agency h2 {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    }
+
+    .agency h1 {
+        font-size: clamp(1rem, 3.5vw, 2rem);
+    }
+
+    .agency h1 .highlight {
+        font-size: clamp(1.2rem, 4.5vw, 2.5rem);
+    }
+
+    .agency p {
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
+        line-height: 1.6;
+    }
+
+    .agency ul li {
+        font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+    }
+
+    .contact-btn {
+        padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1rem, 2.5vw, 1.5rem);
+        font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+    }
+
+    .image-container {
+        padding: 0;
+        align-items: flex-end; /* รักษาการชิดล่าง */
+    }
+}
+
+.agency ul.check-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+    display: block;
+}
+
+.agency ul.check-list li {
+    color: #e0e0e0;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    padding: clamp(0.4rem, 1vw, 0.6rem) 0;
+    position: relative;
+    padding-left: clamp(2rem, 3vw, 2.5rem); /* เพิ่มระยะห่างด้านซ้ายเพื่อให้มีที่ว่างสำหรับไอคอน */
+}
+
+.agency ul.check-list li::before {
+    content: "\2713"; /* รหัส Unicode สำหรับเครื่องหมายติ๊กถูก */
+    color: #FFD700; /* สีเหลืองตามที่ต้องการ */
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* ขนาดของไอคอน */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: white;
+    padding: clamp(1rem, 3vw, 2rem);
+    border-radius: 10px;
+    text-align: center;
+    width: clamp(300px, 80vw, 600px);
+    color: black;
+}
+
+.close {
+    position: absolute;
+    right: clamp(0.8rem, 2vw, 1.5rem);
+    top: clamp(0.8rem, 2vw, 1.5rem);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    cursor: pointer;
+}
+
+/* Animations */
+@keyframes fade {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Services Section */
+.services {
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+    background: linear-gradient(100deg, #0d1b2a, #1b263b);
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.services .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.services h1 {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    margin-bottom: clamp(-1.5rem, -2vw, -1rem);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.services h1 span:first-child {
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.services p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    padding: 2rem clamp(0.5rem, 2vw, 1rem);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    perspective: 1000px;
+    position: relative;
+}
+
+.card {
+    background: #1e3a8a;
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 255, 0.2);
+    text-align: left;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: float 4s ease-in-out infinite;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, rgba(0, 170, 255, 0.1), transparent);
+    border-radius: 15px;
+    z-index: -1;
+    animation: glow 3s infinite alternate;
+}
+
+.card-icon {
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    filter: drop-shadow(0 0 5px rgba(0, 170, 255, 0.5));
+}
+
+.card h3 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 170, 255, 0.3);
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    color: #b0c4de;
+}
+
+.card ul li {
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: color 0.3s ease;
+}
+
+.card:hover {
+    /* transform: rotateY(10deg) scale(1.05); */
+    box-shadow: 0 15px 40px rgba(0, 0, 255, 0.3);
+}
+
+.card:hover ul li {
+    color: #ffffff;
+}
+
+.services .card ul.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #b0c4de;
+}
+
+.services .card ul.check-list li {
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    /* padding-left: clamp(1.5rem, 2.5vw, 2rem); ระยะห่างสำหรับไอคอน */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.services .card ul.check-list li::before {
+    /* content: "\2713"; Unicode สำหรับติ๊กถูก */
+    /* color: #FFD700; สีเหลือง */
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold; /* ทำให้ติ๊กถูกชัดขึ้น */
+}
+
+.services .card:hover ul.check-list li {
+    color: #ffffff;
+}
+
+@keyframes glow {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
+}
+
+/* Works Section */
+.works-section {
+    padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 5vw, 2rem);
+    background: #0a0a23;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.works-section .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.works-section .heading-title {
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    margin-bottom: clamp(2rem, 5vw, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.works-section .heading-title .why-text {
+    font-weight: bold;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.works-section .heading-title .iconnex-text {
+    color: #00aaff;
+    text-shadow: 0 0 10px rgba(0, 153, 255, 0.5);
+}
+
+.works-section .heading-title .iconnex-text:hover {
+    transform: scale(1.05);
+}
+
+.works-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    perspective: 1000px;
+}
+
+.work-card {
+    background: transparent;
+    border: 3px solid #00aaff;
+    border-radius: 15px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: left;
+    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-bottom: clamp(2rem, 5vw, 5rem);
+}
+
+.work-card:nth-child(odd) {
+    transform: translateY(-30px);
+    animation: float-up 4s ease-in-out infinite;
+}
+
+.work-card:nth-child(even) {
+    transform: translateY(30px);
+    animation: float-down 4s ease-in-out infinite;
+}
+
+.work-card::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 15px;
+    z-index: -1;
+    animation: glow 3s infinite alternate;
+}
+
+.work-card .work-card-image {
+    width: 100%;
+    height: clamp(120px, 20vw, 150px);
+    object-fit: cover;
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    border-radius: 10px 10px 0 0;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.work-card h3 {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.work-card ul {
+    list-style: none;
+    padding: 0;
+    color: white;
+    flex-grow: 1;
+}
+
+.work-card ul li {
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    transition: color 0.3s ease;
+}
+
+.work-card:hover .work-card-image {
+    transform: scale(1.1);
+}
+
+.work-card:hover ul li {
+    color: #E0E0E0;
+}
+
+.works-section .work-card ul.check-list {
+    list-style: none;
+    padding: 0;
+    color: white;
+    flex-grow: 1;
+}
+
+.works-section .work-card ul.check-list li {
+    margin-bottom: 0.5rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    padding-left: clamp(1.5rem, 2.5vw, 2rem); /* ระยะห่างสำหรับไอคอน */
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.works-section .work-card ul.check-list li::before {
+    content: "\2713"; /* Unicode สำหรับติ๊กถูก */
+    color: #FFD700; /* สีเหลือง */
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold; /* ทำให้ติ๊กถูกชัดขึ้น */
+}
+
+.works-section .work-card:hover ul.check-list li {
+    color: #E0E0E0;
+}
+
+/* Meteor Effect */
+.meteor {
+    position: absolute;
+    width: clamp(1px, 0.2vw, 2px);
+    height: clamp(1px, 0.2vw, 2px);
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 3px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    animation: meteor-fall linear;
+    animation-duration: var(--duration);
+}
+
+@keyframes meteor-fall {
+    0% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+}
+
+/* Logos Section */
+.logos-section {
+    background: #0d1b2a;
+    padding: clamp(1rem, 3vw, 2rem) 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.logos-slider {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: slide 40s linear infinite;
+}
+
+.logos-slider img {
+    height: clamp(40px, 5vw, 60px);
+    margin: 0 clamp(20px, 3vw, 40px);
+    filter: grayscale(70%) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+.logos-slider img:hover {
+    filter: grayscale(0%) opacity(1);
+    transform: scale(1.2);
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: clamp(20px, 5vw, 30px);
+    right: clamp(20px, 5vw, 30px);
+    width: clamp(40px, 10vw, 50px);
+    height: clamp(40px, 10vw, 50px);
+    background: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 170, 255, 0.4);
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background: #0088cc;
+    box-shadow: 0 6px 15px rgba(0, 170, 255, 0.6);
+    transform: translateY(-5px);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top svg {
+    width: clamp(20px, 5vw, 24px);
+    height: clamp(20px, 5vw, 24px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .services .container, .works-section .container {
+        max-width: 1000px;
+    }
+    .cards-container, .works-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .agency {
+        flex-direction: column;
+        padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
+    }
+    .agency .container,
+    .image-container {
+        max-width: 50%;
+        padding: clamp(0.5rem, 2vw, 1rem);
+    }
+    .agency ul {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    .glitch-text {
+        font-size: clamp(5rem, 13vw, 9rem);
+    }
+    .cards-container, .works-cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .services, .works-section {
+        padding: clamp(1.5rem, 4vw, 3rem) clamp(0.5rem, 3vw, 1.5rem);
+    }
+    .cards-container, .works-cards-container {
+        grid-template-columns: 1fr;
+    }
+    .work-card:nth-child(odd),
+    .work-card:nth-child(even) {
+        transform: translateY(0);
+        animation: float 4s ease-in-out infinite;
+    }
+    .logos-slider img {
+        height: clamp(30px, 5vw, 40px);
+        margin: 0 clamp(15px, 2vw, 20px);
+    }
+    .logos-slider {
+        animation: slide 20s linear infinite;
+    }
+    .glitch-text {
+        font-size: clamp(5rem, 11vw, 8rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .glowing-button, .contact-btn {
+        padding: clamp(0.5rem, 2vw, 0.8rem) clamp(1rem, 3vw, 1.5rem);
+        font-size: clamp(0.9rem, 2vw, 1.1rem);
+    }
+    .agency ul {
+        grid-template-columns: 1fr;
+    }
+    .glitch-text {
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+    .services h1, .works-section .heading-title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+    .card, .work-card {
+        padding: clamp(0.8rem, 2vw, 1.2rem);
+    }
+    .logos-slider img {
+        height: clamp(25px, 5vw, 30px);
+        margin: 0 clamp(10px, 2vw, 15px);
+    }
+}

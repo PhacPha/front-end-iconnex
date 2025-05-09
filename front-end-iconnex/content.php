@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="ICONNEX THAILAND - เอเจนซี่การตลาดดิจิทัลครบวงจร ช่วยธุรกิจเติบโตด้วยกลยุทธ์กว่า 10 ปี">
+    <meta name="keywords"
+        content="การตลาดดิจิทัล, เอเจนซี่การตลาด,iconnex, iconnext, Iconnex, Icocnnext, i con nex, i connex, connex, Connex, IConnex, iconnex thailand, iconnexthailand, Iconnex Thailand, กลยุทธ์การตลาด, SEO, การตลาดออนไลน์, โฆษณาดิจิทัล, การสร้างแบรนด์, การวิเคราะห์ข้อมูล, การตลาดโซเชียลมีเดีย, Facebook Ads, Google Ads, การเพิ่มยอดขาย, การออกแบบเว็บไซต์, การตลาดเนื้อหา, Content Marketing, การ优化เว็บไซต์, Digital Strategy, Influencer Marketing, การจัดการโซเชียลมีเดีย, Email Marketing, การตลาดแบบครบวงจร, SEM, PPC, การสร้างตัวตนออนไลน์, การวิเคราะห์คู่แข่ง, การตลาดในไทย, การพัฒนาแบรนด์, การโฆษณาออนไลน์, การเพิ่มการมองเห็น, Keyword Research, การตลาดยุคใหม่, การวางแผนการตลาด, Analytics, Conversion Rate Optimization, การสร้างลูกค้าใหม่, Lead Generation, การตลาดท้องถิ่น, Local SEO, การออกแบบกราฟิก, การตลาดแบบไวรัล, Video Marketing, การจัดการแคมเปญ, ROI Marketing, การตลาดสำหรับธุรกิจขนาดเล็ก, E-commerce Marketing, การสร้างเว็บไซต์ responsive, การตลาดผ่านแอปพลิเคชัน, Mobile Marketing, การพัฒนากลยุทธ์ดิจิทัล, การจัดการชื่อเสียงออนไลน์, Online Reputation Management, การตลาดแบบ B2B, การตลาดแบบ B2C, การวิเคราะห์พฤติกรรมลูกค้า, Customer Journey, การสร้างความสัมพันธ์กับลูกค้า, CRM, การตลาดแบบ personalization, การใช้ AI ใน การตลาด, Marketing Automation, การตลาดแบบ Omni-channel, การสร้างแคมเปญโฆษณา, การตลาดเพื่อการเติบโต, Growth Marketing, การออกแบบ UX/UI, การตลาดแบบ data-driven, การเพิ่ม traffic เว็บไซต์, Organic Search, Paid Search, การจัดการงบประมาณโฆษณา, การตลาดในยุคดิจิทัล, การสร้างคอนเทนต์ไวรัล, การตลาดสำหรับ Gen Z, การตลาดสำหรับ Millennials, การวิเคราะห์ SEO, Backlink Building, การตลาดผ่าน TikTok, Instagram Marketing, YouTube Marketing, การสร้างชุมชนออนไลน์, Community Management, การตลาดแบบ storytelling, การพัฒนาแบรนด์ในไทย, การตลาดเพื่อสังคม, Social Impact Marketing, การตลาดแบบ real-time, การใช้เครื่องมือดิจิทัล, Digital Tools, การตลาดผ่านพอดแคสต์, Podcast Marketing, การจัดการข้อมูลลูกค้า, Data Management, การตลาดแบบ cross-platform, การเพิ่ม engagement, การตลาดแบบ interactive, การออกแบบแคมเปญดิจิทัล, การตลาดเพื่อการศึกษา, EdTech Marketing, การตลาดเพื่อสุขภาพ, HealthTech Marketing, การตลาดอสังหาริมทรัพย์, Real Estate Marketing, การตลาดแฟชัน, Fashion Marketing, การตลาดอาหารและเครื่องดื่ม, Food & Beverage Marketing, การตลาดท่องเที่ยว, Tourism Marketing, การตลาดยานยนต์, Automotive Marketing, การตลาดเพื่อสิ่งแวดล้อม, Green Marketing, การตลาดแบบ subscription, การตลาดผ่าน LINE, LINE Marketing, การตลาดผ่าน WhatsApp, การใช้ Chatbot ใน การตลาด, การตลาดแบบ affiliate, Affiliate Marketing, การตลาดเพื่อการกุศล, Nonprofit Marketing, การตลาดสำหรับสตาร์ทอัพ, Startup Marketing, การตลาดแบบ guerrilla, Guerrilla Marketing, การตลาดแบบ experiential, Experiential Marketing, การตลาดเพื่อความยั่งยืน, Sustainable Marketing, การตลาดแบบ hyper-local, การวิเคราะห์เทรนด์การตลาด, Marketing Trends, การตลาดในเอเชีย, Asia Marketing, การตลาดสำหรับ SME, การพัฒนาทักษะการตลาด, Marketing Skills, การตลาดแบบ low-budget, การใช้ Big Data ใน การตลาด, การตลาดเพื่อผู้สูงอายุ, Senior Marketing, การตลาดสำหรับเด็ก, Kids Marketing, การตลาดแบบ niche, Niche Marketing, การตลาดเพื่อความหลากหลาย, Diversity Marketing, การตลาดแบบ seasonal, Seasonal Marketing, การตลาดในช่วงเทศกาล, Festival Marketing, การตลาดแบบ pop-up, Pop-up Marketing, การตลาดผ่าน AR/VR, AR/VR Marketing, การตลาดแบบ gamification, Gamification Marketing, การตลาดเพื่อความบันเทิง, Entertainment Marketing, การตลาดแบบ micro-influencer, การตลาดในยุค Metaverse, Metaverse Marketing, การตลาดแบบ voice search, Voice Search Optimization, การตลาดเพื่ออนาคต, Future Marketing">
+    <meta name="keywords"
+        content="การตลาดดิจิทัล, การตลาดออนไลน์,iconnex, iconnext, Iconnex, Icocnnext, i con nex, i connex, connex, Connex, IConnex, iconnex thailand, iconnexthailand, Iconnex Thailand, IconnexThailand, Facebook Ads, การสร้างแบรนด์, Content Marketing, การวิเคราะห์ข้อมูล, Social Media Marketing, การเพิ่มยอดขาย, การตลาดในไทย, Digital Strategy, Lead Generation">
+    <meta name="author" content="Iconnex Thailand Developer">
+    <meta name="description" content="ผลงานของเรา - Iconnex Thailand">
+    <meta name="keywords" content="ผลงาน, Iconnex Thailand, การตลาดดิจิทัล">
+    <meta name="author" content="Iconnex Thailand Developer">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://upload.wikimedia.org;">
+    <title>ผลงานของเรา - Iconnex Thailand</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="content_style.css">
+    <link rel="stylesheet" href="scroll-to-top.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Thai:wdth,wght@62.5,100&family=Rubik+80s+Fade&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="img/2.png" type="image/x-icon">
+</head>
+
+<body>
+    <?php
+    try {
+        require_once 'db_connect.php';
+        $stmt = $pdo->query("SELECT * FROM cluster");
+        $blocks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if (empty($blocks)) {
+            echo '<p>ไม่มีข้อมูลผลงานในขณะนี้</p>';
+        }
+    } catch (PDOException $e) {
+        echo '<p>เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล: ' . $e->getMessage() . '</p>';
+        $blocks = []; // Fallback
+    }
+    ?>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <video id="loading-video" muted playsinline>
+            <source src="img/LOGOICN.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <canvas id="transition-canvas"></canvas>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <div id="main-content" style="display: none;">
+        <!-- Header Placeholder -->
+        <div id="header-placeholder"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <canvas id="particleCanvas"></canvas>
+            <div class="content-wrapper">
+                <h1 class="title">ผลงานของเรา</h1>
+                <section class="portfolio-section">
+                    <div class="portfolio-container">
+                        <div class="portfolio-image">
+                            <img src="img/datours_georgia_event.jpg" alt="Datours Georgia at Iconnex Thailand"
+                                loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h2 class="portfolio-title">สำรวจเสน่ห์แห่งจอร์เจียกับ<br>Datours Georgia</h2>
+                            <hr class="divider">
+                            <p class="portfolio-subtitle">เพื่อนคู่ใจการเดินทางของคุณในจอร์เจีย!</p>
+                            <p class="portfolio-description">
+                                . มาร่วมสัมผัสประสบการณ์สุดพิเศษกับ Datours Georgia ที่บูธงาน Iconnex Thailand!
+                                ภาพนี้เผยให้เห็นทีมงานที่พร้อมต้อนรับนักท่องเที่ยวด้วยรอยยิ้มและข้อมูลครบครัน
+                                เรียนรู้เกี่ยวกับ "อัญมณีแห่งคอเคซัส" พร้อมภาพวิวสวย ๆ
+                                ของภูเขาและสถานที่ท่องเที่ยวที่น่าตื่นตาตื่นใจ อย่าลืมสแกน QR Code
+                                เพื่อรับโปรโมชั่นพิเศษ! <span class="hashtags">#DatoursGeorgia #IconnexThailand
+                                    #เที่ยวจอร์เจีย</span>
+                            </p>
+                            <a href="/contact" class="cta-button">ติดต่อสอบถามเพิ่มเติม</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-container">
+                        <div class="portfolio-content">
+                            <h2 class="portfolio-title">Japan Selection 2025: ผลงานโดดเด่นจากทีมงานของเรา</h2>
+                            <hr class="divider">
+                            <p class="portfolio-subtitle">ค้นพบความเป็นเลิศในการนำเสนอประสบการณ์ญี่ปุ่น</p>
+                            <p class="portfolio-description">
+                                . ยินดีต้อนรับสู่หน้าการแนะนำผลงานของเรา! ในงาน Iconnex Thailand 2025 ทีมงานของ Japan
+                                Selection ได้สร้างความประทับใจด้วยการนำเสนอผลงานที่สะท้อนถึงความมุ่งมั่นและคุณภาพ
+                                ภาพนี้บันทึกช่วงเวลาที่ทีมสื่อมวลชนได้รับรางวัลท่ามกลางฉากหลังอันงดงามของภูเขาไฟฟูจิและดอกซากุระ
+                                ซึ่งเป็นส่วนหนึ่งของการนำเสนอที่เราใส่ใจในทุกมิติ เรียนรู้เพิ่มเติมเกี่ยวกับบริการของเรา
+                                และสำรวจแพ็คเกจพิเศษได้ที่บูธของเรา หรือติดตามรายละเอียดเพิ่มเติมได้ที่ [ลิงก์เว็บไซต์]
+                                <span class="hashtags">#JapanSelection2025 #IconnexThailand #ผลงานบริษัท
+                                    #ประสบการณ์ญี่ปุ่น</span>
+                            </p>
+                            <a href="/contact" class="cta-button">ติดต่อสอบถามเพิ่มเติม</a>
+                        </div>
+                        <div class="portfolio-image">
+                            <img src="img/japan_selection_2025_event.jpg" alt="Japan Selection 2025 at Iconnex Thailand"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div class="portfolio-container">
+                        <div class="portfolio-image">
+                            <img src="img/handy_broth_demo.jpg" alt="Handy Broth at Iconnex Thailand" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <h2 class="portfolio-title">ชิมรสชาติญี่ปุ่นแท้ ๆ กับ Handy Broth ที่ Iconnex Thailand</h2>
+                            <hr class="divider">
+                            <p class="portfolio-subtitle">นำเสนอผลิตภัณฑ์คุณภาพจากใจสู่ทุกครัว</p>
+                            <p class="portfolio-description">
+                                . บริษัทของเราภูมิใจที่ได้ร่วมงาน Iconnex Thailand เพื่อนำเสนอ Handy Broth
+                                น้ำซุปญี่ปุ่นแท้ที่พร้อมให้ทุกคนได้ลิ้มลอง!
+                                ภาพนี้บันทึกช่วงเวลาที่ทีมงานของเราร่วมกับสื่อมวลชนจัดแสดงการสาธิตการใช้งานผลิตภัณฑ์
+                                ด้วยรอยยิ้มและความมุ่งมั่น
+                                เราได้สร้างประสบการณ์ที่ทุกคนสามารถสัมผัสถึงรสชาติและคุณภาพของน้ำซุปที่เหมาะสำหรับทุกเมนู
+                                เรียนรู้เพิ่มเติมเกี่ยวกับ Handy Broth และผลิตภัณฑ์อื่น ๆ ของเราได้ที่ [ลิงก์เว็บไซต์]
+                                <span class="hashtags">#HandyBroth #IconnexThailand #ผลงานบริษัท #รสชาติญี่ปุ่น</span>
+                            </p>
+                            <a href="/contact" class="cta-button">ติดต่อสอบถามเพิ่มเติม</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Block Section -->
+        <section class="block-section">
+            <div class="block-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+            <div class="block-slider" style="margin: 0rem 10rem;">
+                <button class="slider-btn prev">
+                    <</button>
+                        <div class="block-container">
+                            <?php
+                            try {
+                                require_once 'db_connect.php';
+                                $stmt = $pdo->query("SELECT * FROM cluster");
+                                $blocks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                                if (empty($blocks)) {
+                                    echo '<p>ไม่มีข้อมูลผลงานในขณะนี้</p>';
+                                } else {
+                                    foreach ($blocks as $index => $block) {
+                                        $image_url = str_replace('public/', '', $block['image_url']);
+                                        echo '<div class="block-item" data-id="' . htmlspecialchars($block['id']) . '" data-description="' . htmlspecialchars($block['description']) . '">';
+                                        echo '<div class="block-image">';
+                                        echo '<img src="' . htmlspecialchars($image_url) . '" alt="Block ' . htmlspecialchars($block['id']) . ' Image">';
+                                        echo '</div>';
+                                        echo '<div class="block-text">';
+                                        echo '<h3 class="block-title">' . htmlspecialchars($block['title']) . '</h3>';
+                                        echo '<ul class="block-details">';
+                                        echo '<li>' . htmlspecialchars($block['detail1']) . '</li>';
+                                        echo '<li>' . htmlspecialchars($block['detail2']) . '</li>';
+                                        echo '<li>' . htmlspecialchars($block['detail3']) . '</li>';
+                                        echo '</ul>';
+                                        echo '</div>';
+                                        echo '</div>';
+                                    }
+                                }
+                            } catch (PDOException $e) {
+                                echo '<p>เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล: ' . $e->getMessage() . '</p>';
+                            }
+                            ?>
+                        </div>
+                        <button class="slider-btn next">></button>
+            </div>
+        </section>
+
+        <!-- Block Details Section -->
+        <section class="block-details-section">
+            <div class="block-details-container">
+                <div class="block-details-image">
+                    <img src="<?php echo !empty($blocks) ? htmlspecialchars(str_replace('public/', '', $blocks[0]['image_url'])) : 'img/default.jpg'; ?>"
+                        alt="Selected Block Image" id="block-details-img">
+                </div>
+                <div class="block-details-content">
+                    <h2 class="block-details-title" id="block-details-title">
+                        <?php echo !empty($blocks) ? htmlspecialchars($blocks[0]['title']) : 'ไม่มีชื่อ'; ?>
+                    </h2>
+                    <div class="divider"></div>
+                    <p class="block-details-description" id="block-details-description">
+                        <?php echo !empty($blocks) ? htmlspecialchars($blocks[0]['description']) : 'ไม่มีรายละเอียด'; ?>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        // Header
+        fetch('header.php') // เปลี่ยนเป็น .php
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading header:', error);
+                document.getElementById('header-placeholder').innerHTML = '<p>เกิดข้อผิดพลาดในการโหลดเมนู</p>';
+            });
+
+        // Footer
+        fetch('footer.php') // เปลี่ยนเป็น .php
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+            });
+    </script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="เลื่อนขึ้นด้านบน">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="
+    stroke: #ffffff;">
+            <path d="M12 19V5M5 12l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="loading.js"></script>
+    <script src="header.js"></script>
+    <script src="footer.js"></script>
+    <script src="scroll-to-top.js"></script>
+    <script src="content_script.js"></script>
+</body>
+
+</html>
